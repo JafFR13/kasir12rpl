@@ -108,13 +108,14 @@ public class FormLogin extends javax.swing.JFrame {
         ResultSet rs = pst.executeQuery();
 
         if (rs.next()) {
+            
+            String namaPegawai = rs.getString("namapegawai");
             // Login berhasil
             kasir kasir = new kasir();
+            kasir.setNamaPegawai(namaPegawai);
             kasir.setVisible(true);
             
             // Simpan ke session
-            session.setUsername(rs.getString("username"));
-            session.setNamaPegawai(rs.getString("namapegawai"));
 
             this.dispose(); // tutup form login
         } else {
