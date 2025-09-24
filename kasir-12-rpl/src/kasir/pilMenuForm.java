@@ -61,7 +61,7 @@ public class pilMenuForm extends javax.swing.JFrame {
 
         add(scrollPane, BorderLayout.CENTER);
         add(btnPilih, BorderLayout.SOUTH);
-    }
+    } 
 
     private void loadMenuFromDB() {
         try (Connection conn = dbkoneksi.getConnection()) {
